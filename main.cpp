@@ -42,7 +42,6 @@ void QuickSort(int arr[100], int start, int end)
         QuickSort(arr, start, pivot-1);
         QuickSort(arr, pivot+1, end);
     }
-
 }
 
 void FindPath(char field[100][100], int table[100][100], int n, int m, int step, int i, int j)
@@ -60,6 +59,7 @@ void FindPath(char field[100][100], int table[100][100], int n, int m, int step,
         if(i+1 < n && j-1 >= 0) {FindPath(field, table, n, m, step+1, i+1, j-1);}
         if(i-1 >= 0 && j+1 < m) {FindPath(field, table, n, m, step+1, i-1, j+1);}
         if(i-1 >= 0 && j-1 >= 0) {FindPath(field, table, n, m, step+1, i-1, j-1);}
+        
         // FindPath(field, table, step+1)
     }
 }
@@ -69,31 +69,32 @@ int main()
 {
     
     // 1
-    std::string s;
-    int counter = 0;
+    // std::string s;
+    // int counter = 0;
 
-    std::cout << "Enter a string: "; 
-    std::getline(std::cin, s);
+    // std::cout << "Enter a string: "; 
+    // std::getline(std::cin, s);
 
-    std::cout << Count(s, 0);
+    // std::cout << Count(s, 0);
 
 
-    // 2
-    int arr[100], len;
-    std::cout << "Enter a length of an array: "; std::cin >> len;
-    for(int i = 0; i < len; i++)
-    {
-        std::cout << "Enter a number: "; std::cin >> arr[i];
-    }
+    // // 2
+    // int arr[100], len;
+    // std::cout << "Enter a length of an array: "; std::cin >> len;
+    // for(int i = 0; i < len; i++)
+    // {
+    //     std::cout << "Enter a number: "; std::cin >> arr[i];
+    // }
 
-    QuickSort(arr, 0, len-1);
+    // QuickSort(arr, 0, len-1);
 
-    // Printing an array
-    std::cout << "Sorted Array:" << std::endl;
-    for(int i = 0; i < len; i++)
-    {
-        std::cout << arr[i] << " ";
-    }
+    // // Printing an array
+    // std::cout << "Sorted Array:" << std::endl;
+    // for(int i = 0; i < len; i++)
+    // {
+    //     std::cout << arr[i] << " ";
+    // }
+    // std::cout << std::endl;
 
     // 3
 
